@@ -95,7 +95,6 @@
     width: 100%;
 }
 
-
 .open-menu .burger{
     width: 40px;
     height: 2px;
@@ -109,6 +108,10 @@
     transition-duration: 0.4s;
     top: 50%;
     transform: translate(5px, -50%);
+    opacity: 1;
+}
+
+.open-menu .burger:hover{
     opacity: 1;
 }
 
