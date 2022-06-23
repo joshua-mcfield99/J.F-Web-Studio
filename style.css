@@ -127,16 +127,6 @@
     transform: translate(-5px, 0);
 }
 
-.open-menu:hover .burger{
-    transform: translate(-51px, 50%);
-    opacity: 0;
-}
-
-.open-menu:hover .burger::before,
-.open-menu:hover .burger::after{
-    transform: translate(102px, 0);
-    opacity: 0;
-}
 
 .open-menu .burger::before{
     top: -10px;
