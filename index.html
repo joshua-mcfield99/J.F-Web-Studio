@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="./videos">
+    <link rel="preconnect" href="./videos/Logo Animation.mp4">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J.F Web Studio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.typekit.net/tpc2nnp.css">
 </head>
 <body>
+    <div id="preloader" class="loader">
+        <video src="./videos/Logo Animation.mp4" autoplay loop></video>
+    </div>
     <div class="page">
-       <header>
+       <header id="home">
         <div class="mobile">
             <nav role="navigation">
                 <ul class="nav-bar">
-                    <li class="logo"><a href=""><img src="./images/Logo_Mobile_Full.png" alt=""></a></li>
+                    <li class="logo"><a href=""><img src="./images/Logo_Mobile_Full.png" alt="J.F Web Studio Professional Design & Development"></a></li>
                     <input type="checkbox" name="toggle" id="toggle" class="toggle">
                     <span class="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">What  I Do</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Mind Blending</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <label for="toggle" id="item">
+                            <li><a href="#home">Home</a></li>
+                        </label>
+                        <label for="toggle" id="item">
+                            <li><a href="#what">What  I Do</a></li>
+                        </label>
+                        <label for="toggle" id="item">
+                            <li><a href="#">About</a></li>
+                        </label>
+                        <label for="toggle" id="item">
+                            <li><a href="#">Projects</a></li>
+                        </label>
+                        <label for="toggle" id="item">
+                            <li><a href="#">Mind Blending</a></li>
+                        </label>
+                        <label for="toggle" id="item">
+                            <li><a href="#">Contact</a></li>
+                        </label>
                     </span>
                     <label for="toggle" class="open-menu"><div class="burger"></div></label>
                 </ul>
@@ -41,14 +58,23 @@
        <main>
         <div class="banner">
             <div class="content">
-                <h1>
-
+                <h1 class="upper">
+                    Welcome,
+                    <br>
+                    My name is Josh.
                 </h1>
-                <img src="" alt="">
-                <p class="b_sub"></p>
+                <h1 class="lower">
+                    <span class="auto-type"></span>
+                </h1>
+                <img src="./images/Logo_Icon.png" alt="J.F Web Studio Small Logo">
+                <p class="b_sub">
+                    UI/UX Designer & Developer
+                    <br>
+                    Based Near London.
+                </p>
             </div>
         </div>
-        <div class="what">
+        <div class="what" id="what">
             <div class="title">
                 <h2></h2>
             </div>
@@ -214,5 +240,14 @@
 
     <script src="./hover.js"></script>
     <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        const typed = new Typed('.auto-type', {
+            strings: ['Designer.', 'Creator.', 'Developer.', 'Pioneer.'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: false
+        });
+    </script>
 </body>
 </html>
