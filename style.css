@@ -9,6 +9,7 @@
     list-style: none;
     text-decoration: none;
     font-family: filson-pro, sans-serif;
+    box-sizing: border-box;
 }
 
 /*Global*/
@@ -22,6 +23,15 @@
 main{
     position: relative;
     top: 100px;
+}
+
+.title{
+    width: 100%;
+    margin: 50px 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 1.2em;
 }
 
 /*Pre Load*/
@@ -320,3 +330,40 @@ main{
     margin: 0 auto 0 20px;
 }
 
+/*What I Do*/
+
+.what{
+    width: 100%;
+    height: 100vh;
+}
+
+.what .content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.what .content p{
+    font-size: 0.8em;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    margin: 20px 0 0;
+}
+
+.what h3{
+    font-size: 1em;
+    margin-top: 50px;
+}
+
+.what img{
+    display: none;
+}
+
+.b_btn p{
+    font-weight: lighter;
+    font-style: italic;
+}
