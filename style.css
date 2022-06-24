@@ -348,7 +348,7 @@ main{
 
 .what .content p{
     font-size: 0.8em;
-    line-height: 25px;
+    line-height: 30px;
     letter-spacing: 0.02em;
     font-weight: 400;
     margin: 20px 0 0;
@@ -363,7 +363,25 @@ main{
     display: none;
 }
 
-.b_btn p{
-    font-weight: lighter;
+.what .content .b_btn p{
+    font-weight: 200;
+    font-style: italic;
+    line-height: 1.8em;
+}
+
+.b_btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.b_btn a{
+    width: max-content;
+    padding: 20px 40px;
+    margin: 20px auto;
+    background-color: #D9B4FF;
+    color: #FFFFFF;
+    font-weight: 500;
     font-style: italic;
 }
