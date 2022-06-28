@@ -35,16 +35,14 @@
 
 
 /*Global*/
-
-.page{
-    width: 100vw;
-    height: fit-content;
-    display: none;
-}
-
 main{
     position: relative;
     top: 100px;
+}
+
+.page{
+    visibility: hidden;
+    height: 0;
 }
 
 .title{
@@ -432,14 +430,13 @@ main{
 .projects p{
     font-weight: 700;
     font-size: 0.8rem;
+    margin-bottom: 20px;
 }
-
-/*Below is the styling i have don for the slider this should be fin but check just in case*/
 
 /*Projects Slider*/
 .carousel{
     position: relative;
-    height: 600px;
+    height: 75vh;
     width: 80%;
     margin: 0 auto;
 }
@@ -465,7 +462,7 @@ main{
     position: relative;
     height: 100%;
     width: 100%;
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease-in;
 }
 
 .carousel__slide{
@@ -513,8 +510,13 @@ main{
     height: 10px;
     background-color: #FFFFFF;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .carousel__indicator.current-slide{
     background: #D9B4FF;
+}
+
+.is-hidden{
+    display: none;
 }
