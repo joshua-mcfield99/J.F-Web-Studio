@@ -63,7 +63,7 @@ main{
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: left;
+
     justify-content: center;
     margin: 0 auto;
 }
@@ -435,91 +435,84 @@ main{
 }
 
 /*Projects Slider*/
-
-.slider{
+.carousel{
     position: relative;
-    height: 100vh;
-    width: 85%;
+    height: 600px;
+    width: 80%;
     margin: 0 auto;
 }
 
-.slider__image{
+
+.carousel__image{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.slider__track-container{
-    background: #2A2A2A;
+.carousel__track-container{
+    background: lightgreen;
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
-.slider__track{
-    margin: 0;
+.carousel__track{
     padding: 0;
+    margin: 0;
     list-style: none;
     position: relative;
     height: 100%;
-    transition: transform 0.25s ease-in;
+    width: 100%;
+    transition: transform 0.25s ease;
 }
 
-.slide{
+.carousel__slide{
     position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
 }
 
-
-.slider__button{
+.carousel__button{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 10%;
-    height: 100%;
-    z-index: 90;
+    background: #2A2A2A;
     border: 0;
-    background-color: #616161;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
     cursor: pointer;
 }
 
-.slider__button img{
-    width: 90%;
+.carousel--left{
+    left: -25px;
 }
 
-.slider--right{
-    left: 98.9%;
+.carousel--right{
+    right: -25px;
 }
 
-.slider--left{
-    right: 100%;
+.carousel__button img{
+    width: 12px;
 }
 
-.slider__nav{
-    background: transparent;
+.carousel__nav{
+    background: #2A2A2A;
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    position: relative;
-    top: -6%;
 }
 
-.slide__indicator{
+.carousel__indicator{
     border: 0;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background-color: #FFFFFF;
-    margin: 0 10px;
-    cursor: pointer;
+    margin: 0 5px;
 }
 
-.slide__indicator.current__slide{
-    background-color: #D9B4FF;
-}
-
-.is__hidden{
-    opacity: 0.8;
+.carousel__indicator.current-slide{
+    background: #D9B4FF;
 }
