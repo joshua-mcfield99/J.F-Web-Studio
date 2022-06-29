@@ -436,8 +436,8 @@ main{
 /*Projects Slider*/
 .carousel{
     position: relative;
-    height: 75vh;
-    width: 80%;
+    height: 110vh;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -449,10 +449,11 @@ main{
 }
 
 .carousel__track-container{
-    background: lightgreen;
+    background: #2A2A2A;
     height: 100%;
     position: relative;
     overflow: hidden;
+    color: #FFFFFF;
 }
 
 .carousel__track{
@@ -482,18 +483,19 @@ main{
     justify-content: center;
     padding: 5px;
     cursor: pointer;
+    height: 60px;
 }
 
 .carousel--left{
-    left: -25px;
+    left: -22px;
 }
 
 .carousel--right{
-    right: -25px;
+    right: -22px;
 }
 
 .carousel__button img{
-    width: 12px;
+    width: 15px;
 }
 
 .carousel__nav{
@@ -519,4 +521,64 @@ main{
 
 .is-hidden{
     display: none;
+}
+
+/*Slide inner styling*/
+
+.s_head{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: left;
+    text-align: left;
+}
+
+.s_head img{
+    width: 20%;
+    margin: 0 10px 0 20px;
+}
+
+.s_head h3{
+    width: 50%;
+}
+
+.slide_content{
+    width: 85%;
+    margin: 0 auto;
+    font-weight: 200;
+    text-align: left;
+}
+
+.slide_content p{
+    font-weight: 400;
+    margin: 20px 0 0;
+}
+
+.slide_content img{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.take_me{
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.take_me a{
+    color: #FFFFFF;
+    background: #D9B4FF;
+    padding: 10px 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+p.open_new{
+    margin-top: 0;
+    text-align: center;
 }
