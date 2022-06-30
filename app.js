@@ -1,14 +1,21 @@
-//Loading Screen
-const loader = document.getElementById('preloader');
-const page = document.querySelector('.page');
+// Contents
+//
+// 1. Loader
+// 2. Mobile Menu
+// 3. Projects Slider
+
+// 1. Loader
+
+const loader = document.querySelector('#preloader');
+const wrapper = document.querySelector('.wrapper');
 
 window.addEventListener('load', function(){
     loader.style.display = 'none';
-    page.style.visibility = 'visible';
-    page.style.height = 'fit-content';
+    wrapper.style.visibility = 'visible';
+    wrapper.style.height = 'fit-content';
 });
 
-//Hamburger Menu
+// 2. Mobile Menu
 
 const burger = document.querySelector('.open-menu');
 
@@ -16,7 +23,8 @@ burger.addEventListener('click', (e) =>{
     e.currentTarget.classList.toggle('is-active')
 });
 
-// Slide
+// 3. Project Slider
+
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel--right');
@@ -29,6 +37,7 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 const setSlidePosition = (slide, index) =>{
     slide.style.left = slideWidth * index + 'px'
 };
+
 slides.forEach(setSlidePosition);
 
 const moveToSlide = (track, currentSlide, targetSlide) =>{

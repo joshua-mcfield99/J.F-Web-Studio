@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="./videos">
-    <link rel="preconnect" href="./videos/Logo Animation.mp4">
-    <link rel="preconnect" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J.F Web Studio</title>
+    <link rel="preconnect" href="./videos/Logo Animation.mp4">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/tpc2nnp.css">
+    <title>J.F Web Studio</title>
 </head>
 <body>
     <div id="preloader" class="loader">
-        <video src="./videos/Logo Animation.mp4" autoplay loop></video>
+        <video src="./videos/Logo Animation.mp4" loop autoplay></video>
     </div>
-    <div class="page">
-       <header id="home">
+    <div class="wrapper">
+    <header id="home">
         <div class="mobile">
             <nav role="navigation">
                 <ul class="nav-bar">
-                    <li class="logo"><a href=""><img src="./images/Logo_Mobile_Full.png" alt="J.F Web Studio Professional Design & Development"></a></li>
+                    <li class="logo">
+                        <a href=""><img src="./images/Logo_Mobile_Full.png" alt="J.F Web Studio logo"></a>
+                    </li>
                     <input type="checkbox" name="toggle" id="toggle" class="toggle">
                     <span class="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#what">What  I Do</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#mind">Mind Blending</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </span>
+                    <label for="toggle" class="open-menu"><div class="burger"></div></label>
+                </ul>
+            </nav>
+        </div>
+        <div class="desktop">
+            <nav role="navigation">
+                <ul class="navbar">
+                    <li class="logo">
+                        <a href="#home">
+                            <img src="./images/Logo_Mobile_Full.png" alt="J.F Web Studio logo">
+                        </a>
+                    </li>
+                    <li class="nav">
+                        <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#what">What  I Do</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#projects">Projects</a></li>
                             <li><a href="#mind">Mind Blending</a></li>
                             <li><a href="#contact">Contact</a></li>
-                    </span>
-                    <label for="toggle" class="open-menu"><div class="burger"></div></label>
+                        </ul>
+                    </li>
+                    <li class="head_btn">
+                        <a href="" class="book">Book A Chat!</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <div class="desktop head">
-            <img src="" alt="">
-            <div class="desk_nav">
-
-            </div>
-            <div class="book_container">
-                <a href="" class="book"></a>
-            </div>
-        </div>
-       </header>
-       <main>
-        <div class="banner">
+    </header>
+    <main>
+        <section class="banner">
             <div class="content">
-                <h1 class="upper">
-                    Welcome,
-                    <br>
-                    My name is Josh.
-                </h1>
-                <h1 class="lower">
-                    <span class="auto-type"></span>
-                </h1>
-                <img src="./images/Logo_Icon.png" alt="J.F Web Studio Small Logo">
-                <p class="b_sub">
+                <div class="page__title">
+                    <h1>
+                        Welcome,
+                        <br>
+                        My name is Josh,
+                    </h1>
+                    <h1>
+                        <span class="auto-type"></span>
+                    </h1>
+                </div>
+                <img src="./images/Logo_Icon.png" alt="J.F Web Studio icon" class="desktop b_image">
+                <p class="sub__text">
                     UI/UX Designer & Developer
                     <br>
                     Based Near London.
                 </p>
             </div>
-        </div>
-        <div class="what" id="what">
+        </section>
+        <section class="What" id="what">
             <div class="title">
                 <h2>What I Do</h2>
             </div>
@@ -75,9 +92,9 @@
                 <p>
                     I am committed to the development of websites using a variety of techniques like animation, in addition to quick load-times and versatile viewing features. The resulting product must be easy to use, even for clients with limited computer capability.
                 </p>
-                <img src="./images/What_I_Do.png" alt="">
-                <div class="b_btn">
-                    <p>
+                <img src="./images/What_I_Do.png" alt="Person with question marks around their head" class="desktop">
+                <div class="what_btn">
+                    <p class="sub__text">
                         Need a developer or designer?
                         <br>
                         Then what are you waiting for book a chat now!
@@ -85,8 +102,8 @@
                     <a href="#" class="book">Book A Chat!</a>
                 </div>
             </div>
-        </div>
-        <div class="about">
+        </section>
+        <section class="about">
             <div class="title">
                 <h2>About</h2>
             </div>
@@ -101,19 +118,23 @@
                     <br>
                     I mean, who doesn't like to see their project from end to end?
                 </p>
-                <p>
+                <p class="p--bot">
                     If you're interested, here are some hobbies that I like to do regularly;
                     I am a very active person who enjoys long walks in nature and keeping up with regular exercise. I also like to mess around with code and play games.
                 </p>
             </div>
-        </div>
-        <div class="projects">
+        </section>
+        <section class="projects">
             <div class="title">
                 <h2>Projects</h2>
             </div>
             <div class="content">
-                <p class="pro_top">Here are some projects I have done some paid and some are from the course I am currently taking.</p>
-                <p>Click/Tap On the arrows & dots to move between projects!</p>
+                <p class="p--top intro__text center--text">
+                    Here are some projects I have done some paid and some are from the course I am currently taking.
+                </p>
+                <p class="p--bot intro__text bold center--text">
+                    Click/Tap On the arrows & dots to move between projects!
+                </p>
             </div>
             <div class="carousel">
                 <button class="carousel__button carousel--left is-hidden">
@@ -136,7 +157,7 @@
                                 <img src="./images/Nubreed_hotels_landing.png" alt="Nubreed Hotels landing page">
                                 <div class="take_me">
                                     <p class="open_new">Link below opens in a new tab.</p>
-                                    <a href="" class="take_me_btn">Take me there!</a>
+                                    <a href="" class="take__btn book">Take me there!</a>
                                 </div>
                             </div>
                         </li>
@@ -155,7 +176,7 @@
                                 <img src="./images/Fotomatic_landing.png" alt="Fotomatic landign page">
                                 <div class="take_me">
                                     <p class="open_new">Link below opens in a new tab.</p>
-                                    <a href="" class="take_me_btn">Take me there!</a>
+                                    <a href="" class="take__btn book">Take me there!</a>
                                 </div>
                             </div>
                         </li>
@@ -174,7 +195,7 @@
                                 <img src="./images/The_Breakfast_Club_landing.png" alt="The Breakfast Club landing page">
                                 <div class="take_me">
                                     <p class="open_new">Link below opens in a new tab.</p>
-                                    <a href="" class="take_me_btn">Take me there!</a>
+                                    <a href="" class="take__btn book">Take me there!</a>
                                 </div>
                             </div>
                         </li>
@@ -192,8 +213,8 @@
                                 </p>
                                 <img src="./images/J.F_landing.png" alt="J.F Web Studio old site">
                                 <div class="take_me">
-                                    <p class="open_new">Link below opens in a new tab.</p>
-                                    <a href="" class="take_me_btn">Take me there!</a>
+                                    <p class="open__new center--text">Link below opens in a new tab.</p>
+                                    <a href="" class="take__btn book">Take me there!</a>
                                 </div>
                             </div>
                         </li>
@@ -209,107 +230,100 @@
                     <button class="carousel__indicator"></button>
                 </div>
             </div>
-        </div>
-        <div class="mind">
+        </section>
+        <section class="mind">
             <div class="title">
                 <h2>Mind Bending</h2>
             </div>
             <div class="content">
-                <p class="mind_desk"></p>
-                <p class="mind__mobile">
-                    What's the point of this?
-                    <br>
-                    It doesn't do anything...
-                    <br>
-                    Check this section out on a laptop or desktop to see what happens (o_0)?
-                </p>
-                <div class="vid-container mind__mobile">
+                <div class="mobile">
+                    <p class="intro__text center--text">
+                        What's the point of this?
+                        <br>
+                        <br>
+                        It doesn't do anything...
+                        <br>
+                        <br>
+                        Check this section out on a laptop or desktop to see what happens (o_0)?
+                    </p>
                     <video src="./videos/Logo Animation.mp4" autoplay loop></video>
                 </div>
-                <div class="distortion">
-
+                <div class="desktop">
+                    <p class="intro__text center--text">
+                        Let's Mind Blend Our Logo!
+                        <br>
+                        Hover over the logo to do some mind blending.
+                    </p>
+                    <div class="distortion"></div>
                 </div>
             </div>
-        </div>
-        <div class="contact">
+        </section>
+        <section class="contact">
             <div class="title">
                 <h2>Contact</h2>
             </div>
             <div class="content">
-                <p class="center--text">Here are some ways to contact us!</p>
-                <div class="normal inner-container">
-                    <h3>The usual suspects :</h3>
-                    <p>Phone : 07484661594</p>
-                    <p>Email : hello@jfwebstudio.com</p>
-                    <a href="mailto:hello@jfwebstudio.com" rel="noopener" target="_blank" class="book"> Email Us</a>
+                <p class="center--text intro__text p--top">
+                    Here are some ways to contact us!
+                </p>
+                <div class="normal inner--container">
+                    <h3>The usual suspects:</h3>
+                    <ul>
+                        <li>Phone Us: 07484661594</li>
+                        <li>Email: hello@jfwebstudio.com</li>
+                        <li><a href="" class="book">Email Us!</a></li>
+                    </ul>
                 </div>
-                <div class="other inner-container">
-                    <h3>Other ways to get in-touch :</h3>
-                    <a href="" class="o_btn linkedin"><img src="./images/Linkedin-8.png" alt="Linkedin"></a>
-                    <a href="" class="o_btn whatsapp"><img src="./images/WhatsApp-8.png" alt="WhatsApp"></a>
-                    <a href="" class="o_btn github"><img src="./images/Github-8.png" alt="GitHub"></a>
-                    <a href="" class="o_btn fiverr"><img src="./images/Fiverr-8.png" alt="Fiverr"></a>
+                <div class="other inner--container">
+                    <h3>Other ways to get in-touch:</h3>
+                    <ul>
+                        <li><a href="#" class="book"><img src="./images/Linkedin-8.png" alt="Linkedin"></a></li>
+                        <li><a href="#" class="book"><img src="./images/WhatsApp-8.png" alt="WhatsApp"></a></li>
+                        <li><a href="#" class="book"><img src="./images/Github-8.png" alt="GitHub"></a></li>
+                        <li><a href="#" class="book"><img src="./images/Fiverr-8.png" alt="Fiverr"></a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-       </main>
-       <footer>
-        <div class="foot_banner">
+        </section>
+    </main>
+    <footer>
+        <div class="foot__banner">
             <img src="./images/Footer_Banner.png" alt="Footer Banner image">
         </div>
-        <div class="foot">
-            <a href="" class="logo__foot"><img src="./images/Logo_Desktop.png" alt=""></a>
-            <div class="foot_nav">
-                <h3>Page Links :</h3>
+        <section class="foot">
+            <img src="./images/Logo_Desktop.png" alt="J.F Web Studio professional web design and development.">
+            <div class="foot__nav center--text">
+                <h3>Page Links:</h3>
                 <ul>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">What I Do</a>
-                    </li>
-                    <li>
-                        <a href="">About</a>
-                    </li>
-                    <li>
-                        <a href="">Projects</a>
-                    </li>
-                    <li>
-                        <a href="">Mind Bending</a>
-                    </li>
-                    <li>
-                        <a href="">Contact</a>
-                    </li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#what">What  I Do</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#mind">Mind Blending</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="foot_other">
-                <h3>Useful Links :</h3>
+            <div class="foot__other center--text">
+                <h3>Useful Links:</h3>
                 <ul>
-                    <li>
-                        <a href="" class="o_f_btn linkedin"><img src="./images/Linkedin-8.png" alt="Linkedin"></a>
-                    </li>
-                    <li>
-                        <a href="" class="o_f_btn whatsapp"><img src="./images/WhatsApp-8.png" alt="WhatsApp"></a>
-                    </li>
-                    <li>
-                        <a href="" class="o_f_btn github"><img src="./images/Github-8.png" alt="GitHub"></a>
-                    </li>
-                    <li>
-                        <a href="" class="o_f_btn fiverr"><img src="./images/Fiverr-8.png" alt="Fiverr"></a>
-                    </li>
+                    <li><a href="#" class="book"><img src="./images/Linkedin-8.png" alt="Linkedin"></a></li>
+                    <li><a href="#" class="book"><img src="./images/WhatsApp-8.png" alt="WhatsApp"></a></li>
+                    <li><a href="#" class="book"><img src="./images/Github-8.png" alt="GitHub"></a></li>
+                    <li><a href="#" class="book"><img src="./images/Fiverr-8.png" alt="Fiverr"></a></li>
                 </ul>
             </div>
             <div class="copyright">
-                <img src="./images/Copyright.png" alt="Copyright Symbol">
-                <p>
+                <img src="./images/Copyright.png" alt="Copyright icon">
+                <p class="sub__text center--text">
                     This Website was created by J.F Web Studio and is    protected by copyright law.
+                    <br>
+                    <br>
                     Nubreed hotels are not part of J.F Web Studio and are protected by copyright law.
                 </p>
             </div>
-        </div>
-       </footer>
-    </div>   
-    <script src="./hover.js"></script>
+        </section>
+    </footer>
+    </div>
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
