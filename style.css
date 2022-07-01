@@ -64,25 +64,58 @@
 || 3. Globals ||
 ==============*/
 
+html{
+    height: fit-content;
+    padding: 0 0 100px 0;
+}
+
 body{
     width: 100vw;
     font-family: filson-pro, sans-serif;
     font-weight: 400;
-    font-size: 16px;
 }
+
+main{
+    position: relative;
+    top: 100px;
+}
+
+*{
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 370px){
+    *{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 410px) {
+    *{
+        font-size: 14px;
+    }
+}
+
 
 section{
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     padding-bottom: 30px;
     height: fit-content;
-    max-height: 667px;
+}
+
+@media only screen and (min-width: 800px) {
+    section{
+        max-height: 1080px;
+    }    
 }
 
 p{
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.02em;
     line-height: 1.5em;
     margin: 20px 0 0;
@@ -90,18 +123,31 @@ p{
 
 h3{
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .desktop{
     display: none;
 }
 
+@media only screen and (min-width: 767px) {
+    .desktop{
+        display: inline-block;
+    }
+
+    header .desktop{
+        display: none;
+    }
+}
 
 .content{
     width: 80%;
     height: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
 }
 
 .title {
@@ -111,7 +157,7 @@ h3{
 }
 
 .title h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -123,14 +169,15 @@ h3{
     background: #D9B4FF;
     color: #FFFFFF;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.03em;
+    max-height: 53px;
 }
 
 .sub__text{
     font-weight: 200;
     font-style: italic;
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.06rem;
 }
 
@@ -139,7 +186,8 @@ h3{
 }
 
 .intro__text{
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin-top: 0;
 }
 
 .center--text{
@@ -154,11 +202,21 @@ h3{
     margin: 20px auto;
 }
 
+#what,
+#about,
+#projects,
+#mind,
+#contact{
+    position: relative;
+    top: -80px;
+}
+
 /*===========
 || 4. Head ||
 ===========*/
 
-head{
+header{
+    width: 100vw;
     height: 100px;
     position: fixed;
     top: 0;
@@ -188,7 +246,7 @@ nav{
 .logo{
     width: 50%;
     min-width: 200px;
-    max-width: 300px;
+    max-width: 240px;
     z-index: 99;
 }
 
@@ -213,6 +271,13 @@ nav{
     transition: all .2s ease-in-out;
 }
 
+@media only screen and (min-width: 1020px){
+    .menu{
+        width: 60%;
+        height: 60vh;
+    }    
+}
+
 .menu li{
     padding-left: 30px;
     margin-top: 40px;
@@ -226,6 +291,7 @@ nav{
     transition: 0.15s ease-in-out;
     position: relative;
     padding: 10px;
+    font-size: 1.2rem;
 }
 
 .menu li a::after{
@@ -346,17 +412,91 @@ nav{
 }
 
 .page__title h1{
-    font-size: 1.8rem;
+    font-size: 2.3rem;
 }
 
 .page__title span{
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     color: #D9B4FF;
 }
 
-.banner .sub__text{
-    position: relative;
-    top: 60%;
+.b_image{
+    margin: 50px 0;
+    width: 80%;
+    max-width: 310px;
+}
+
+@media only screen and (min-width: 365px){
+    .b_image{
+        margin: 80px 0;
+    }
+}
+
+@media only screen and (min-width: 410px){
+    .page__title h1{
+        font-size: 2.5rem;
+    }
+    
+    .page__title span{
+        font-size: 2.5rem;
+    }
+
+    .b_image{
+        margin: 20% 0;
+    }
+}
+
+@media only screen and (min-width: 649px) {
+    .page__title h1{
+        font-size: 3rem;
+        width: fit-content;
+    }
+    
+    .page__title span{
+        font-size: 3rem;
+        width: fit-content;
+    }
+
+    .page__title{
+        width: fit-content;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+
+    .banner{
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(./images/Banner_Background_Large.jpg);
+        background-position: right;
+        background-size: cover;
+    }
+
+    .banner .content{
+        height: 80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page__title{
+        height: fit-content;
+        margin: 0 0 400px  0;
+    }
+
+    .banner p{
+        height: fit-content;
+        margin-right: 70%;
+    }
+
+    .b_image{
+        width: 50%;
+        max-width: 675px;
+        height: fit-content;
+        margin: 0;
+        position: relative;
+        top: 30%;
+        transform: translateY(-30%);
+    }
 }
 
 /*================
@@ -367,6 +507,37 @@ nav{
     height: fit-content;
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (min-width: 674px){
+    .what_btn{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto 20px;
+    }
+
+    .what_btn p{
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .what img{
+        width: 50%;
+        margin: 30px auto 20px;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+    .what_btn{
+        width: 80%;
+        margin: 30px auto 20px;
+    }
+
+    .what_btn p{
+        width: 60%;
+    }
+
 }
 
 /*============
@@ -381,6 +552,12 @@ nav{
     min-height: 760px;
 }
 
+@media only screen and (min-width: 674px){
+    .about img{
+        width: 50%;
+        margin: 30px auto 20px;
+    }
+}
 
 /*===============
 || 9. Projects ||
@@ -399,11 +576,24 @@ nav{
     position: relative;
     height: 100vh;
     min-height: 685px;
-    max-height: 685px;
+    max-height: 700px;
     width: 85%;
     margin: 0 auto;
 }
 
+
+@media only screen and (min-width: 540px){
+    .carousel{
+        max-height: 760px;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+    .carousel{
+        min-height: 650px;
+        max-height: 650px;
+    }
+}
 
 .carousel__image{
     width: 100%;
@@ -498,9 +688,55 @@ nav{
     text-align: left;
 }
 
+@media only screen and (min-width: 1000px){
+    .s_head{
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .s_head img{
+        margin: 0 10px 0 0 !important;
+    }
+
+    .slide_content{
+        width: 80% !important;
+        flex-direction: row !important;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .s__text{
+        width: 80%;
+    }
+
+    .slide_content img{
+        width: 50% !important;
+        height: fit-content;
+        margin: 50px 0 !important;
+    }
+
+    .take_me{
+        width: 40% !important;
+        margin-top: 122px !important;
+    }
+
+    .open_new{
+        width: fit-content;
+        margin: 0 auto !important;
+    }
+    
+    .take_me a{
+        margin: 20px auto 0;
+    }
+
+}
+
+
+
 .s_head img{
     width: 20%;
     margin: 0 10px 0 20px;
+    max-width: 80px;
 }
 
 .s_head h3{
@@ -512,6 +748,8 @@ nav{
     margin: 0 auto;
     font-weight: 200;
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .slide_content p{
@@ -521,13 +759,14 @@ nav{
 
 .slide_content img{
     width: 100%;
-    margin-top: 30px;
+    margin: 20px auto;
+    max-width: 450px;
 }
 
 .take_me{
     width: 100%;
     height: 100px;
-    margin-top: 5px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -536,14 +775,15 @@ nav{
 .take_me a{
     color: #FFFFFF;
     background: #D9B4FF;
-    padding: 10px 40px;
-    margin-top: 10px;
+    padding: 15px 40px;
+    margin-top: 15px;
     text-align: center;
 }
 
 p.open_new{
     margin-top: 0;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 /*====================
@@ -561,6 +801,12 @@ p.open_new{
     object-position: center;
 }
 
+@media only screen and (min-width: 674px){
+    .mind .desktop{
+        display: none;
+    }
+}
+
 /*===============
 || 12. Contact ||
 ===============*/
@@ -575,31 +821,38 @@ p.open_new{
 
 .inner--container{
     width: 100%;
-    height: 40vh;
+    height: fit-content;
     background: #FFFFFF;
     color: black;
-    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: center;    
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 30px;
 }
+
 .inner--container ul {
     width: 80%;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 50px;
 }
 
 .inner--container li{
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 10px auto 0 0;
+    text-align: left;
+    font-size: 1.2rem;
 }
+
 
 .inner--container .book{
     position: relative;
     top: 10px;
-    margin: 0 auto;
 }
 
 .inner--container h3{
@@ -607,12 +860,23 @@ p.open_new{
 }
 
 .normal{
-    max-height: 320px;
+    min-height: 300px;
+    max-height: 415px;
 }
+
+.normal h3{
+    margin: 20px 0 70px 0;
+}
+
 
 .other{
     height: 60vh;
-    max-height: 375px;
+    min-height: 400px;
+    max-height: 415px;
+}
+
+.other h3{
+    margin: 50px 0 0 0;
 }
 
 .other li{
@@ -620,7 +884,9 @@ p.open_new{
     justify-content: center;
     align-items: center;
     height: fit-content;
+    margin: 0 auto;
 }
+
 .other .book{
     padding: 0;
     width: 100%;
@@ -635,12 +901,35 @@ p.open_new{
 }
 
 .other img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 52px;
+    min-height: 52px;
     object-fit: cover;
 }
 
 /*==============
 || 13. Footer ||
 ==============*/
+
+footer{
+    position: relative;
+    top: 100px;
+}
+
+.foot__banner{
+    width: 100%;
+    min-height: 150px;
+}
+
+.foot__banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 150px;
+}
 
 .foot{
     min-height: 880px;
@@ -649,11 +938,13 @@ p.open_new{
 .foot img{
     width: 70%;
     margin: 30px auto;
+    max-width: 325px;
 
 }
 
 .foot a{
     color: black;
+    font-size: 1.2rem;
 }
 
 .foot li{
@@ -699,18 +990,23 @@ p.open_new{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     width: 90%;
+    height: fit-content;
     margin: 0 auto;
+    max-width: 690px;
 }
 
 .copyright img{
-    width: 20%;
+    width: 15%;
     height: fit-content;
+    max-width: 35px;
+    min-width: 28px;
 }
 
 .copyright p{
-    font-size: 0.7rem;
-    margin: 0;
+    font-size: 1rem;
+    margin: auto 0;
     line-height: 1rem;
 }
 
