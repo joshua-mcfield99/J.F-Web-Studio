@@ -10,9 +10,11 @@ const loader = document.querySelector('#preloader');
 const wrapper = document.querySelector('.wrapper');
 
 window.addEventListener('load', function(){
+    setTimeout(function(){
     loader.style.display = 'none';
     wrapper.style.visibility = 'visible';
     wrapper.style.height = 'fit-content';
+    }, 5000)
 });
 
 // 2. Mobile Menu
