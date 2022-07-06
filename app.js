@@ -14,7 +14,7 @@ window.addEventListener('load', function(){
     loader.style.display = 'none';
     wrapper.style.visibility = 'visible';
     wrapper.style.height = 'fit-content';
-    }, 5000)
+    }, 0)
 });
 
 // 2. Mobile Menu
