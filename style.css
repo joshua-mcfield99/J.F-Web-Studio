@@ -1056,9 +1056,14 @@ footer{
     }
 
     .carousel{
-        height: 600px;
-        min-height: 600px;
+        max-width: 900px;
+        max-height: 500px;
+        min-height: 0;
         margin: auto;
+    }
+
+    .take_me{
+        margin-top: 20px;
     }
 
     .carousel__slide{
@@ -1094,10 +1099,6 @@ footer{
     .slide_content img{
         width: 40%;
         margin: auto 0 auto auto;
-    }
-
-    .take_me{
-        margin: auto 0 0 0;
     }
 
     .contact .intro__text{
@@ -1278,7 +1279,74 @@ footer{
     }
 
     .b_image{
-        margin: auto 0 auto auto;
+        margin: 0 0 0 auto;
         max-width: 450px;
+        position: relative;
+        top: 50%;
+    }
+
+    .what_btn {
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+    .what_btn .sub__text{
+        width: fit-content;
+        margin-right: 40px;
+    }
+
+    .mind .desktop{
+        display: inline-block;
+    }
+
+    .distortion{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .foot__banner{
+        height: 300px;
+        width: 100%;
+    }
+
+    .foot{
+        height: 700px;
+        min-height: 0;
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .foot img{
+        margin: 100px 0 0 50px;
+    }
+
+    .foot__other img {
+        margin: 0;
+    }
+
+    .foot__nav,
+    .foot__other{
+        margin-top: 100px;
+    }
+
+    .copyright img{
+        margin: 0;
+    }
+
+    main{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    body{
+        background: #2A2A2A;
+    }
+
+    .what,
+    .projects,
+    .mind,
+    .foot{
+        background: #FFFFFF;
     }
 }

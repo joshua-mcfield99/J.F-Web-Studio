@@ -3,6 +3,7 @@
 // 1. Loader
 // 2. Mobile Menu
 // 3. Projects Slider
+// 4. Mind Blending
 
 // 1. Loader
 
@@ -107,4 +108,15 @@ dotsNav.addEventListener('click', e =>{
     moveToSlide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
+});
+
+// 4. Mind Blending
+
+new hoverEffect({
+    parent: document.querySelector('.distortion'),
+    intensity: 0.1,
+    image1: './images/Logo_Icon.png',
+    image2: './images/Logo_Glossy2.png',
+    angle: Math.PI / 10,
+    displacementImage: './images/heightMap.png'
 });
